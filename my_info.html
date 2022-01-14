@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my_information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./my_info.css">
+
+<script>
+    window.onload = function(){
+        let page_num = 0;
+        let prev =document.querySelector("#prev_btn");
+        let next =document.querySelector("#next_btn");
+        let page =document.querySelector("#page");
+ 
+
+        let color = ['#5D91CA','#F3CCB7','#B0B2AF','#7FB057','#3D3C3A']
+        let info = ["name <br> kang jiwon","age <br> 19","birthday <br> September 7th","job <br> high-school student","email <br> 2020gy118@gyeongui.hs.kr"]
+
+        next.addEventListener("click",nextevent);
+        prev.addEventListener("click",prevevent);
+
+        function nextevent(){
+            if (page_num < 4){
+                page_num += 1;
+            }
+            else {
+                page_num = 0;
+            }
+            page.innerHTML= info[page_num];
+            change_backcolor();
+
+        }
+
+        function prevevent(){
+            if (page_num >0){
+                page_num -= 1;
+            }
+            else {
+                page_num = 4;
+            }
+            page.innerHTML= info[page_num];
+            change_backcolor();
+
+        }
+
+
+        function change_backcolor(){
+            let body = document.querySelector("body");
+            body.style.background = color[page_num];
+            if (page_num ==0){
+                document.getElementById("image").src = '바다.jpg';
+            } else if (page_num == 1){
+                document.getElementById("image").src = '벚꽃.jpg';
+            }else if (page_num == 2){
+                document.getElementById("image").src = '공간.jpg';
+            }else if (page_num == 3){
+                document.getElementById("image").src = '풀.jpg';
+            }else {
+                document.getElementById("image").src = '야경.jpg';
+            }
+        
+            
+        }
+        change_backcolor()
+    }
+
+</script>
+   
+</head>
+<body>
+    <header>
+        <img src="./home.png"  class= "home_img" alt="" onclick="location.href='./mainpage.html'">
+    
+    </header>
+
+    <section>
+        <img id = "image" src = '바다.jpg' width = 500px; height = 500px; style="vertical-align:middle;">
+        <h1 id ="page" style = "text-align: center;">name <br> Kang Jiwon</h1>
+    </section>
+
+    <div>
+        <div class = "btn_container">
+            <img src="./left.png" alt="" id = "prev_btn">
+            <img src="./right.png" alt="" id = "next_btn">
+        </div>
+    </div>
+    
+    
+</body>
+</html>

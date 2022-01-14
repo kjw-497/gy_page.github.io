@@ -1,0 +1,128 @@
+
+*{
+    font-family: 'Gowun Batang', serif;
+}
+
+
+body{
+  height : 100vh;
+  transition: background 1s ease-in-out;
+  background-size: cover;
+}
+
+.home_img{ 
+  margin-left: 1%;
+  margin-top: 1%;
+  mix-blend-mode: multiply; 
+  background-image: url(home.png);
+  background-repeat:no-repeat;
+  background-color: none;
+  border: none;
+  height: 27px;
+  width: 27px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px ;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px ;
+  vertical-align: center;
+  cursor: pointer;
+}
+
+#prev_btn{
+  margin-top: 220px ;
+  width:40px;
+  height:40px;
+  cursor: pointer;
+}
+
+#next_btn{
+  margin-top: 220px ;
+  width:40px;
+  height:40px;
+  cursor: pointer;
+}
+
+#image{
+  margin-left: 15%;
+  margin-top: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px ;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px ;
+  
+}
+#page{
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  margin-top: -300px;
+  border: 2px;
+  margin-left: 55%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px ;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px ;
+  background-color: white;
+}
+
+#gy{
+    margin-top: 70px;
+}
+
+.btn_container{
+    text-align: center;
+    font-size: 15px;
+}
+
+.custom-btn {
+    margin-top: 250px ;
+    width: 50px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Gowun Batang', serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+.btn-16 {
+    border: none;
+    color: #000;
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: #000;
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+  

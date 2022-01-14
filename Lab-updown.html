@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>업다운게임</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .contWrap{
+            position: relative;
+            width: 400px;
+            background-color: antiquewhite;
+            padding: 20px;
+            top : 40%;
+            left : 50%;
+            text-align: center;
+            transform: translate(-50%, -50%); 
+        }
+
+        input {
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            max-width: 170px;
+        }
+
+        button {
+            font-size : 20px;
+            padding: 8px 20px;
+            text-align: center;
+        
+        }
+        h3.title{
+            animation: fadein 2s;
+        }
+
+        @keyframes fadein{
+            from {
+                opacity :0;
+            }
+
+            to{
+                opacity: 1;
+            }
+        }
+            
+
+
+    </style>
+
+    <script>
+
+        window.onload = function(){
+
+            let input = document.querySelector('.userInput'); //user가 입력한 값 선택
+            let result = document.querySelector(".result"); // 결과값 선택
+            let button = document.querySelector(".startBtn"); // 결과값 확인 버튼
+
+            let answer= parseInt(Math.random()*100); //랜덤한 숫자 선택
+        
+            alert(answer); 
+
+            button.addEventListener("click", clickevent); //click 이라는 이벤트가 발생할 때, resultfunc 실행
+            
+            input.addEventListener("keydown",enterkey);
+
+            function clickevent(){ // click 이벤트 시 실행할 함수 resultfunc 정의
+                let value = input.value;
+
+            
+                if ( answer > value ){
+                    result.innerHTML = "업↑" //result 요소를 innerHTML으로 바꿈
+                } 
+             
+                else if (answer < value) {
+                    result.innerHTML = "다운↓" 
+                }   
+
+                else {
+                    result.innerHTML = "🎉정답🎉"
+                }   
+            }   
+                
+            function enterkey() {
+                if(window.event.keyCode == 13) {
+                    clickevent();
+                } 
+                else {
+                    console.log("엔터키가 아닙니다!");
+                }
+                
+            }
+
+        }
+
+
+    </script>
+
+    
+</head>
+<body>
+    <div class="contWrap">
+        <h3 class = "title">Choose number</h3>
+        <p class="result">1부터 100사이</p>
+        <input class = "userInput" type="number" value="10" max="99" min="0">
+        <button type="button" class="startBtn" >확인</button>
+        <img src=https://i.pinimg.com/236x/c1/92/b0/c192b0ed96f1157557440a38dbf0b21e.jpg width="70%">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <style>
+    body{
+      background-color: rgb(6, 6, 78);
+    }
+
+    .login_box {
+      width: 400px;
+      height: 420px;
+      margin-top: 150px;
+      margin-left: 35%;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px ;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px ;
+      text-align: center;
+      border: 1px solid gray;
+      
+      background-color: white;
+    }
+
+    #login_header {
+      margin-top: 64px;
+      margin-bottom: 46px;
+    }
+
+    #id_input_box, #pw_input_box {
+      margin-bottom: 14px;
+      width: 180px;
+      height: 26px;
+      border: 0;
+      border-bottom: 1px solid lightgray;
+    }
+
+    #login_button {
+      margin-top: 40px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px ;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px ;
+      border: 2px solid burlywood;
+      height: 27px;
+      width: 120px;
+      background-color: white;
+    }
+
+    #login_button:hover{
+      background-color: burlywood;
+      color : white;
+      cursor: pointer;   
+    }
+
+    #signup_button {
+      margin-top: 15px;
+      border: 2px solid burlywood;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px ;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px ;
+      height: 27px;
+      width: 120px;
+      background-color: white;
+    }
+
+    #signup_button:hover{
+      background-color: burlywood;
+      color : white;
+      cursor: pointer;   
+    }
+    
+  </style>
+  <script>
+    window.onload = function(){
+      let id_input = document.querySelector('#id_input_box');
+      let pw_input = document.querySelector('#pw_input_box');
+      let login_btn = document.querySelector('#login_button');
+
+      login_btn.addEventListener("click",click);
+
+      function click(){
+        let id = id_input.value;
+        let pw = pw_input.value;
+        if (id.length != 0 && pw.length != 0){
+          alert("로그인 되었습니다");
+          location.href='./mainpage.html'
+        }
+        else if (id.length == 0){
+          alert("아이디를 입력해주세요")
+        }
+        else if (pw.length == 0){
+          alert("비밀번호를 입력해주세요")
+        }
+      }
+        
+
+
+    }
+
+    
+  </script>
+</head>
+<body>
+  <div class="login_box">
+    <h1 id="login_header">로그인</h1>
+    <input id="id_input_box" type="text" placeholder="ID를 입력하세요">
+    <input id="pw_input_box" type="password" placeholder="PW를 입력하세요"><br>
+    <button id="login_button" onclick="buttonClicked()">로그인</button><br>
+    <button id="signup_button" onclick="location.href='./signup1.html'">회원가입</button>
+  </div>
+</body>
+</html>

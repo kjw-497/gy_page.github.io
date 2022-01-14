@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>school_picture</title>
+    <link rel="stylesheet" href="./album.css">
+</head>
+<script>
+    window.onload = function(){
+        let btn1 = document.querySelector('#btn1');
+        let btn2 = document.querySelector('#btn2');
+        let btn3 = document.querySelector('#btn3');
+        let btn4 = document.querySelector('#btn4');
+        let btn5 = document.querySelector('#btn5');
+        let cont = document.querySelector('.container');
+
+        btn1. addEventListener('click',btn1_event);
+        btn2. addEventListener('click',btn2_event);
+        btn3. addEventListener('click',btn3_event);
+        btn4. addEventListener('click',btn4_event);
+        btn5. addEventListener('click',btn5_event);
+
+        function btn1_event(){
+            cont.style.transform = 'translate(0px)';
+        }
+        function btn2_event(){
+            cont.style.transform = 'translate(-200px)';
+        }
+        function btn3_event(){
+            cont.style.transform = 'translate(-500px)';
+        }
+        function btn4_event(){
+            cont.style.transform = 'translate(-850px)';
+        }
+        function btn5_event(){
+            cont.style.transform = 'translate(-1200px)';
+        }
+
+    }
+    
+    
+</script>
+<body> 
+    <header>
+        <img src="./home.png"  class= "home_img" alt="" onclick="location.href='./mainpage.html'">
+    </header>
+    <div style = "overflow:hidden">
+        <div class = "container">
+            <div class = "inner" style = 'margin-left: 10%;'>
+                <img id = 'img1'src ='학교1.jpg'>
+            </div>
+            <div class = "inner">
+                <img src ='학교2.jpg'>
+            </div>
+            <div class = "inner">
+                <img src ='학교3.jpg'>
+            </div>
+            <div class = "inner">
+                <img src ='학교4.jpg'>
+            </div>
+            <div class = "inner">
+                <img src ='학교5.jpg'>
+            </div>
+        </div>
+    </div>
+    <section class = 'btn'>
+        <button id = "btn1"></button>
+        <button id = "btn2"></button>
+        <button id = "btn3"></button>
+        <button id = "btn4"></button>
+        <button id = "btn5"></button>
+    </section>
+    
+</body>
+</html>

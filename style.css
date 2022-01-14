@@ -1,0 +1,130 @@
+#header_inner{
+    border: 3px solid darkblue;
+    margin : 5px;
+    text-align : center;
+    
+} 
+
+nav{
+    border-style: solid;
+    border-width: 3px;
+    border-color: lightgrey;
+    margin : 6px
+} 
+
+.img_section{
+    border: 3px solid rgb(0, 0, 187);
+    margin : 6px;
+    text-align : center;
+}
+
+
+.video_section{
+    border: 3px solid darkblue;
+    margin : 6px;
+    text-align : center;
+}
+
+footer{
+    border: 3px solid lightgray;
+    margin : 5px;
+    text-align : center;
+}
+
+#loginButton{
+    margin-left: 80%;
+    border: 0px;
+    cursor: pointer;
+}
+
+#loginButton:hover{
+    background-color: lightskyblue;
+}
+
+#loginButton:active{
+    background-color: black;
+    color:aliceblue;
+}
+
+#signupButton{
+    border: 0px;
+    cursor: pointer;
+}
+
+#signupButton:hover{
+    background-color: lightskyblue;
+}
+
+#signupButton:active{
+    background-color: black;
+    color:aliceblue;
+}
+
+
+#myinfo_nav{
+    margin-left: 1%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px ;
+    width:75px;
+    height: 20px;
+    border: 0px;
+    background-color: lightblue;
+}
+
+#myinfo_nav:hover{
+    background-color: slategray;
+}
+
+#album_nav{
+    margin-left: 1%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px ;
+    width: 65px;
+    height: 20px;
+    border: 0px;
+    background-color: lightblue;
+    border: 0px;
+}
+
+#album_nav:hover{
+    background-color: slategray;
+}
+
+#lab_nav{
+    margin-left: 1%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px ;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px ;
+    width:65px;
+    height: 20px;
+    border: 0px;
+    background-color: lightblue;
+    border: 0px;
+}
+
+#lab_nav:hover{
+    background-color: slategray;
+}
+
+h1.pagetitle{
+    animation: fadein 2s;
+}
+
+@keyframes fadein{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#bottom {
+    font-size: 10px;
+}
+
